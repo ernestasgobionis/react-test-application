@@ -63,7 +63,7 @@
 
     &.selected {
       i {
-        color: rgba(0, 0, 0, 0.75);
+        color: $color-main;
       }
 
       &.DESC i {
