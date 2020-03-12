@@ -1,0 +1,30 @@
+/**
+  Global styles
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(240, 240, 245);
+}
+
+/**
+  Colors
+ */
+
+$color-main: rgba(85, 124, 235, 1);
+$color-main-light: rgba(85, 124, 235, 5);
+$color-error: #e95853;
+
+/**
+  Easings
+ */
+
+$easeOut: cubic-bezier(0.175, 0.885, 0.32, 1);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);

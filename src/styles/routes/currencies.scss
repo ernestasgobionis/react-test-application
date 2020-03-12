@@ -1,0 +1,78 @@
+@import '../variables';
+
+.currencies-list-container {
+  min-height: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 0.5px solid #cacaca;
+
+  .currencies-list-header {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .currencies-list-error-container {
+      display: flex;
+      flex-direction: column;
+      color: lightcoral;
+
+      .error-retry {
+        cursor: pointer;
+        color: $color-main;
+      }
+    }
+  }
+
+  .currencies-list-loader-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  table {
+    width: 100%;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 8px 15px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  .table-head {
+    i {
+      float: right;
+      padding-bottom: 2px;
+      color: rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: all 250ms $easeOut;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    &.selected {
+      i {
+        color: rgba(0, 0, 0, 0.75);
+      }
+
+      &.DESC i {
+        transform: rotate(0);
+      }
+
+      &.ASC i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

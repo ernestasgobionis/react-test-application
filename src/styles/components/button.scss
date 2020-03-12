@@ -1,0 +1,47 @@
+@import '../variables';
+
+.container {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  outline: none;
+  border: none;
+  background: $color-main;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1em;
+
+  &.disabled {
+    &:after {
+      cursor: not-allowed;
+      opacity: 0.25;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.3s $easeOut;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.15;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px 35px;
+  }
+}

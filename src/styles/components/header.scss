@@ -1,0 +1,114 @@
+@import '../variables';
+$whitey: #f0f0f0;
+
+$duration: 0.2s;
+$distance: 8px;
+
+.header-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.075);
+  border-bottom: 0.5px solid #cacaca;
+
+  .header-items-list {
+    padding: 10px 20px;
+    display: flex;
+    .header-item {
+      list-style: none;
+      margin: 0 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      .header-item-link {
+        user-select: none;
+        color: #000;
+        margin: 0 20px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Helvetica Neue', sans-serif;
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-bottom: 8px;
+        cursor: pointer;
+        transition: background-color 250ms $easeOut;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background-color: #000;
+        }
+
+        &::before {
+          opacity: 0;
+          transform: translateY(-$distance);
+          transition: transform 0s $easeOutBack, opacity 0s,
+            background-color 250ms $easeOutBack;
+        }
+
+        &::after {
+          opacity: 0;
+          transform: translateY($distance/2);
+          transition: transform $duration $easeOutBack, opacity $duration,
+            background-color 250ms $easeOutBack;
+        }
+
+        &.selected {
+          color: $color-main;
+          &::before,
+          &::after {
+            background-color: $color-main;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        &:hover {
+          &::before,
+          &::after {
+            color: $color-main;
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          &::before {
+            transition: transform $duration $easeOutBack, opacity $duration,
+              background-color 250ms $easeOutBack;
+          }
+
+          &::after {
+            transition: transform 0s $duration $easeOutBack,
+              opacity 0s $duration, background-color 250ms $easeOutBack;
+          }
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
