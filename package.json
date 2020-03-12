@@ -13,7 +13,7 @@
     "lint": "prettier --check \"**\"",
     "prettier": "prettier --print-width 80 --write \"**\"",
     "test": "NODE_ENV=test jest --verbose",
-    "test-watch": "yarn run test --watch --notify"
+    "test:watch": "yarn run test --watch --notify"
   },
   "husky": {
     "hooks": {
