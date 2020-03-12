@@ -121,17 +121,15 @@ class Currencies extends Component<Props> {
     const { currencies } = this.props;
     const { sortField, sortOrder, sortedItems } = this.state;
     return (
-      <div>
-        <CurrenciesList
-          items={sortedItems}
-          status={currencies.status}
-          onSortFieldChange={this.onSortFieldChange}
-          onSortOrderChange={this.onSortOrderChange}
-          fetchCurrencies={this.props.fetchCurrencies}
-          sortField={sortField}
-          sortOrder={sortOrder}
-        />
-      </div>
+      <CurrenciesList
+        items={sortedItems}
+        status={currencies.status}
+        onSortFieldChange={this.onSortFieldChange}
+        onSortOrderChange={this.onSortOrderChange}
+        fetchCurrencies={this.props.fetchCurrencies}
+        sortField={sortField}
+        sortOrder={sortOrder}
+      />
     );
   }
 }

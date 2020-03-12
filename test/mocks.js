@@ -9,5 +9,3 @@ export const MOCK_GET_JSON_RESPONSE = {
     'reprehenderit molestiae ut ut quas totam\n' +
     'nostrum rerum est autem sunt rem eveniet architecto',
 };
-
-export const MOCK_POST_JSON = { title: 'foo', body: 'bar', userId: 1, id: 101 };

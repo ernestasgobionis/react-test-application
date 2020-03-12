@@ -1,5 +1,6 @@
-import { callGet, callPost, callUpdate, callDelete } from './api';
-import { MOCK_GET_JSON_RESPONSE, MOCK_POST_JSON } from '../../test/mocks';
+import { callGet } from './api';
+import { MOCK_GET_JSON_RESPONSE } from '../../test/mocks';
+
 jest.setTimeout(60000);
 
 describe('GET Requests', () => {
